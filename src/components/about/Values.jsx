@@ -5,9 +5,9 @@ import Reveal from '../ui/Reveal'
 import { img } from '../../data/gallery'
 
 const values = [
-  { title: 'Personal', image: img(17), text: 'No two weddings look the same, because no two couples are the same. Every design starts with you.' },
-  { title: 'Abundant', image: img(36), text: 'Generous florals, layered textures and greenery that feels gathered, never sparse.' },
-  { title: 'Calm', image: img(47), text: 'Clear plans, honest timelines and a team that arrives early, so the day feels effortless.' },
+  { title: 'Personal', image: img('bride-bouquet-smile'), text: 'No two weddings look the same, because no two couples are the same. Every design starts with you.' },
+  { title: 'Abundant', image: img('garland-backdrop'), text: 'Generous florals, layered textures and greenery that feels gathered, never sparse.' },
+  { title: 'Calm', image: img('candlelit-church-aisle'), text: 'Clear plans, honest timelines and a team that arrives early, so the day feels effortless.' },
 ]
 
 // Cards that flip to reveal the story behind each value (hover on desktop, tap on mobile).

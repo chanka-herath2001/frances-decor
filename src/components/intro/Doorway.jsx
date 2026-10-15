@@ -56,7 +56,7 @@ export default function Doorway({ onEnter }) {
           <motion.div initial={{ opacity: 0, scale: 0.94 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1.4, delay: 0.4 }}>
             <Door
               open={open}
-              behind={<img src={img(32)} alt="" className="h-full w-full scale-110 object-cover" />}
+              behind={<img src={img('sunset-aisle')} alt="" className="h-full w-full scale-110 object-cover" />}
             />
           </motion.div>
         </div>

@@ -15,13 +15,13 @@ export default function Statement() {
   return (
     <section ref={ref} className="relative grid overflow-hidden md:grid-cols-2">
       <div className="relative h-[520px] overflow-hidden md:h-[720px]">
-        <img src={img(2)} alt="" className="absolute inset-0 h-full w-full object-cover grayscale" loading="lazy" />
+        <img src={img('forest-aisle')} alt="" className="absolute inset-0 h-full w-full object-cover grayscale" loading="lazy" />
         <div className="absolute inset-0 bg-ink/30" />
         <motion.div
           style={{ y: photoY, rotate }}
           className="absolute left-[10%] top-[18%] w-[52%] border-[6px] border-paper shadow-2xl md:w-[48%]"
         >
-          <img src={img(18)} alt="Couple leaving through a floral doorway" className="aspect-[4/5] w-full object-cover" loading="lazy" />
+          <img src={img('floral-doorway-exit')} alt="Couple leaving through a floral doorway" className="aspect-[4/5] w-full object-cover" loading="lazy" />
         </motion.div>
         <motion.p
           style={{ y: textY }}

@@ -19,11 +19,11 @@ export const navLinks = [
 ]
 
 export const services = [
-  { no: '01', title: 'Ceremony Arches', text: 'Floral arches, draped canopies and moon gates that frame your vows.', image: img(3) },
-  { no: '02', title: 'Reception Styling', text: 'Head tables, tablescapes and lighting that carry the night.', image: img(11) },
-  { no: '03', title: 'Bridal Florals', text: 'Bouquets and buttonholes composed around you and your dress.', image: img(24) },
-  { no: '04', title: 'Aisles & Entrances', text: 'Corridors, aisles and welcome moments that set the first impression.', image: img(14) },
-  { no: '05', title: 'Signage & Details', text: 'Welcome signs, candles and the small touches guests remember.', image: img(41) },
+  { no: '01', title: 'Ceremony Arches', text: 'Floral arches, draped canopies and moon gates that frame your vows.', image: img('blush-arch-vows') },
+  { no: '02', title: 'Reception Styling', text: 'Head tables, tablescapes and lighting that carry the night.', image: img('candle-head-table') },
+  { no: '03', title: 'Bridal Florals', text: 'Bouquets and buttonholes composed around you and your dress.', image: img('bride-white-bouquet') },
+  { no: '04', title: 'Aisles & Entrances', text: 'Corridors, aisles and welcome moments that set the first impression.', image: img('mint-drape-corridor') },
+  { no: '05', title: 'Signage & Details', text: 'Welcome signs, candles and the small touches guests remember.', image: img('gold-welcome-sign') },
 ]
 
 export const process = [
@@ -34,10 +34,10 @@ export const process = [
 ]
 
 export const featured = [
-  { title: 'A Sunset Promise', place: 'Seaside ceremony', image: img(32) },
-  { title: 'Under the Canopy', place: 'Forest ceremony', image: img(2) },
-  { title: 'Blush & Branches', place: 'Indoor vows', image: img(3) },
-  { title: 'Moon Arch', place: 'Beach at golden hour', image: img(46) },
+  { title: 'A Sunset Promise', place: 'Seaside ceremony', image: img('sunset-aisle') },
+  { title: 'Under the Canopy', place: 'Forest ceremony', image: img('forest-aisle') },
+  { title: 'Blush & Branches', place: 'Indoor vows', image: img('blush-arch-vows') },
+  { title: 'Moon Arch', place: 'Beach at golden hour', image: img('circle-arch-sunset') },
 ]
 
 export const quotes = [

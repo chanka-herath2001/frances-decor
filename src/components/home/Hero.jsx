@@ -56,7 +56,7 @@ export default function Hero({ ready }) {
             <div className="absolute -inset-3 rounded-t-full border border-navy/40" />
             <div className="h-full overflow-hidden rounded-t-full shadow-2xl shadow-navy/20">
               <motion.img
-                src={img(15)}
+                src={img('floral-wall-couple')}
                 alt="Couple beneath a floral wall"
                 className="h-full w-full object-cover"
                 initial={{ scale: 1.3 }}
@@ -66,7 +66,7 @@ export default function Hero({ ready }) {
             </div>
           </motion.div>
           <motion.div style={{ y: ySmall }} className="absolute bottom-6 left-0 w-[46%] border-[6px] border-paper shadow-xl">
-            <img src={img(46)} alt="Floral moon arch at sunset" className="aspect-[4/5] w-full object-cover" />
+            <img src={img('circle-arch-sunset')} alt="Floral moon arch at sunset" className="aspect-[4/5] w-full object-cover" />
           </motion.div>
           <CircleText text="Weddings · Events · Florals · " className="absolute right-[-8px] bottom-0 h-28 w-28 sm:h-32 sm:w-32" />
         </motion.div>

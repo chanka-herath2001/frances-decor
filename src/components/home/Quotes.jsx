@@ -16,7 +16,7 @@ export default function Quotes() {
   return (
     <section className="relative overflow-hidden bg-navy py-28 text-paper md:py-36">
       <motion.img
-        src={img(43)}
+        src={img('crystal-curtain')}
         alt=""
         className="absolute inset-0 h-full w-full object-cover opacity-20 mix-blend-luminosity"
         animate={{ scale: [1.05, 1.15, 1.05] }}

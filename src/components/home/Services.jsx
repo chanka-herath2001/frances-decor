@@ -12,8 +12,8 @@ export default function Services() {
 
   return (
     <section className="relative bg-mist py-24 md:py-32">
-      <img src={img(13)} alt="" className="absolute left-0 top-0 hidden h-full w-[14%] object-cover opacity-80 lg:block" />
-      <img src={img(29)} alt="" className="absolute right-0 top-0 hidden h-full w-[14%] object-cover opacity-80 lg:block" />
+      <img src={img('beach-aisle')} alt="" className="absolute left-0 top-0 hidden h-full w-[14%] object-cover opacity-80 lg:block" />
+      <img src={img('chapel-altar-florals')} alt="" className="absolute right-0 top-0 hidden h-full w-[14%] object-cover opacity-80 lg:block" />
       <p className="absolute left-[15%] top-10 hidden font-script text-3xl leading-tight text-navy/70 xl:block">
         Good friends,<br />brighter days
       </p>

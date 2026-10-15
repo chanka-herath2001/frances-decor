@@ -17,7 +17,7 @@ export default function Story() {
     <section ref={ref} className="relative overflow-hidden py-24 md:py-36">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1fr_1.3fr_1fr]">
         <motion.div style={{ rotate: rotL, y: yL }} className="mx-auto w-3/4 max-w-xs shadow-2xl shadow-navy/20 lg:w-full">
-          <img src={img(7)} alt="Bride holding a garnet bouquet" className="aspect-[3/4] w-full object-cover" loading="lazy" />
+          <img src={img('bride-red-bouquet')} alt="Bride holding a garnet bouquet" className="aspect-[3/4] w-full object-cover" loading="lazy" />
         </motion.div>
 
         <div className="text-center">
@@ -38,7 +38,7 @@ export default function Story() {
         </div>
 
         <motion.div style={{ rotate: rotR, y: yR }} className="mx-auto hidden w-full max-w-xs shadow-2xl shadow-navy/20 lg:block">
-          <img src={img(22)} alt="Couple in champagne tones" className="aspect-[3/4] w-full object-cover" loading="lazy" />
+          <img src={img('couple-champagne')} alt="Couple in champagne tones" className="aspect-[3/4] w-full object-cover" loading="lazy" />
         </motion.div>
       </div>
     </section>

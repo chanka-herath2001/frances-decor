@@ -48,7 +48,7 @@ export default function Palette() {
 
         <Reveal from="right" className="relative mx-auto w-full max-w-sm">
           <div className="relative aspect-[4/5] overflow-hidden rounded-t-full border-[10px] border-paper shadow-2xl">
-            <img src={img(38)} alt="Reception tables styled in soft blue" className="h-full w-full object-cover" loading="lazy" />
+            <img src={img('blue-hydrangea-centerpiece')} alt="Blue hydrangea and white rose centrepiece" className="h-full w-full object-cover" loading="lazy" />
             <motion.div className="absolute inset-0 mix-blend-color" animate={{ backgroundColor: active.hex, opacity: 0.35 }} />
           </div>
           <motion.p

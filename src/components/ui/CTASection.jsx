@@ -13,7 +13,7 @@ export default function CTASection({ title = 'Kindly Inquire', text = 'Tell us a
       <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 sm:px-8 md:grid-cols-2">
         <Reveal from="left" className="relative mx-auto w-full max-w-sm">
           <div className="relative aspect-[4/3] -rotate-3 overflow-hidden shadow-2xl shadow-navy/20">
-            <img src={img(32)} alt="Sunset wedding aisle" className="h-full w-full object-cover" loading="lazy" />
+            <img src={img('sunset-aisle')} alt="Sunset wedding aisle" className="h-full w-full object-cover" loading="lazy" />
           </div>
           <div className="absolute -bottom-10 -right-4 flex h-44 w-64 rotate-6 items-center justify-center bg-dusk shadow-xl sm:w-72">
             <div className="absolute inset-x-0 top-0 h-1/2 bg-[#a3b7cb] [clip-path:polygon(0_0,100%_0,50%_100%)]" />
