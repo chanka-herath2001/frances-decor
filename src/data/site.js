@@ -9,8 +9,6 @@ export const contact = {
   instagram: 'https://www.instagram.com/',
 }
 
-export const tagline = ['She had love on her lips', 'and flowers in her hair…']
-
 export const navLinks = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
@@ -18,12 +16,33 @@ export const navLinks = [
   { to: '/contact', label: 'Contact' },
 ]
 
+// Three collections, shown as tall cards (mahogany / olive / mahogany)
 export const services = [
-  { no: '01', title: 'Ceremony Arches', text: 'Floral arches, draped canopies and moon gates that frame your vows.', image: img('blush-arch-vows') },
-  { no: '02', title: 'Reception Styling', text: 'Head tables, tablescapes and lighting that carry the night.', image: img('candle-head-table') },
-  { no: '03', title: 'Bridal Florals', text: 'Bouquets and buttonholes composed around you and your dress.', image: img('bride-white-bouquet') },
-  { no: '04', title: 'Aisles & Entrances', text: 'Corridors, aisles and welcome moments that set the first impression.', image: img('mint-drape-corridor') },
-  { no: '05', title: 'Signage & Details', text: 'Welcome signs, candles and the small touches guests remember.', image: img('gold-welcome-sign') },
+  {
+    word: 'Vows',
+    title: 'Ceremony Styling',
+    text: 'Floral arches, draped canopies, aisles and altars that frame the moment you say “I do”.',
+    items: ['Arches & moon gates', 'Aisle florals & candles', 'Church & garden styling'],
+    image: img('blush-arch-vows'),
+    tone: 'mahogany',
+  },
+  {
+    word: 'Bespoke',
+    title: 'Full Wedding Design',
+    text: 'One look carried from the welcome sign to the last dance — ceremony, reception and every detail between.',
+    items: ['Concept & moodboard', 'Ceremony + reception', 'Bridal & party florals'],
+    image: img('candle-head-table'),
+    tone: 'olive',
+    featured: true,
+  },
+  {
+    word: 'Tables',
+    title: 'Reception & Florals',
+    text: 'Head tables, centrepieces, bouquets and the candlelit glow that carries the night.',
+    items: ['Head tables & centrepieces', 'Bouquets & buttonholes', 'Welcome signs & details'],
+    image: img('terracotta-centrepiece'),
+    tone: 'mahogany',
+  },
 ]
 
 export const process = [
@@ -34,6 +53,7 @@ export const process = [
 ]
 
 export const featured = [
+  { title: 'Terracotta Supper', place: 'Long-table reception', image: img('terracotta-long-tables') },
   { title: 'A Sunset Promise', place: 'Seaside ceremony', image: img('sunset-aisle') },
   { title: 'Under the Canopy', place: 'Forest ceremony', image: img('forest-aisle') },
   { title: 'Blush & Branches', place: 'Indoor vows', image: img('blush-arch-vows') },
@@ -48,12 +68,26 @@ export const quotes = [
 ]
 
 export const palette = [
-  { name: 'Ivory', hex: '#f6f2ea' },
-  { name: 'Mist', hex: '#dbe4ec' },
-  { name: 'Dusk', hex: '#b6c6d6' },
-  { name: 'Cornflower', hex: '#6f8fb8' },
-  { name: 'Navy', hex: '#2b3f63' },
-  { name: 'Blush', hex: '#ead9d3' },
+  { name: 'Egg Shell', hex: '#ede7db' },
+  { name: 'Linen', hex: '#ddccb7' },
+  { name: 'Olive', hex: '#9b9879' },
+  { name: 'Moss', hex: '#6a6a53' },
+  { name: 'Rust', hex: '#8d553c' },
+  { name: 'Mahogany', hex: '#4d342d' },
+]
+
+// "Tropical Vows" setups. TODO: swap in the real tropical-vows photos once supplied
+// (add them to public/images/photos and data/gallery.js, then list their ids here).
+export const tropical = ['beach-aisle', 'seaside-drape-arch', 'circle-arch-sunset', 'sunset-aisle', 'lawn-arch']
+
+// Content reels. Drop vertical videos into public/reels/ and set `video`,
+// or set `href` to the Instagram reel link. Until then each tile shows its poster.
+export const reels = [
+  { title: 'Moon arch at sunset', poster: img('circle-arch-sunset'), video: null, href: null },
+  { title: 'Building a floral wall', poster: img('floral-wall-couple'), video: null, href: null },
+  { title: 'Candlelit head table', poster: img('candlelit-banquet'), video: null, href: null },
+  { title: 'Bouquet in the making', poster: img('bride-red-bouquet'), video: null, href: null },
+  { title: 'Aisle set-up', poster: img('candlelit-church-aisle'), video: null, href: null },
 ]
 
 export const faqs = [

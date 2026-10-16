@@ -7,8 +7,14 @@ import { featured } from '../../data/site'
 // Pinned horizontal scroll: vertical scrolling slides the featured celebrations sideways.
 export default function FeaturedWork() {
   const ref = useRef(null)
+  const track = useRef(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end end'] })
-  const x = useTransform(scrollYProgress, [0, 1], ['0%', '-62%'])
+  // slide exactly far enough to bring the last card into view, whatever the card count / screen width
+  const x = useTransform(scrollYProgress, (p) => {
+    const el = track.current
+    const overflow = el ? Math.max(0, el.scrollWidth - window.innerWidth + 32) : 0
+    return -p * overflow
+  })
   const bar = useTransform(scrollYProgress, [0, 1], ['0%', '100%'])
 
   return (
@@ -17,7 +23,7 @@ export default function FeaturedWork() {
         <div className="mx-auto mb-10 w-full max-w-6xl px-5 sm:px-8">
           <SectionTitle align="left" eyebrow="Selected celebrations" title="Enchanted Events" />
         </div>
-        <motion.div style={{ x }} className="flex w-max gap-6 pl-5 sm:gap-10 sm:pl-[max(2rem,calc((100vw-72rem)/2+2rem))]">
+        <motion.div ref={track} style={{ x }} className="flex w-max gap-6 pl-5 sm:gap-10 sm:pl-[max(2rem,calc((100vw-72rem)/2+2rem))]">
           {featured.map((f, i) => (
             <Card key={f.title} item={f} index={i} />
           ))}

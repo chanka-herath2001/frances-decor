@@ -2,10 +2,8 @@ import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'motion/react'
 import Button from '../ui/Button'
 import CircleText from '../ui/CircleText'
-import Petals from '../ui/Petals'
 import { Branch } from '../ui/Botanical'
 import { img } from '../../data/gallery'
-import { tagline } from '../../data/site'
 
 const ease = [0.22, 1, 0.36, 1]
 const rise = (d) => ({ hidden: { opacity: 0, y: 50 }, show: { opacity: 1, y: 0, transition: { duration: 1.1, delay: d, ease } } })
@@ -20,7 +18,6 @@ export default function Hero({ ready }) {
 
   return (
     <section ref={ref} className="relative min-h-[100svh] overflow-hidden bg-paper pb-20 pt-32 md:pt-36">
-      <Petals count={10} />
       <Branch className="absolute -right-10 top-28 w-72 -rotate-[30deg] text-navy/15" />
       <div className="relative mx-auto grid max-w-7xl items-center gap-16 px-5 sm:px-8 lg:grid-cols-[1.1fr_1fr]">
         <motion.div style={{ y: yText }} initial="hidden" animate={state} className="relative z-10 text-center lg:text-left">
@@ -29,14 +26,12 @@ export default function Hero({ ready }) {
             <motion.span variants={rise(0.35)} className="block text-[19vw] sm:text-[8rem] lg:text-[9.5rem]">Frances</motion.span>
             <motion.span
               variants={rise(0.6)}
-              className="-mt-4 block font-script text-[14vw] normal-case leading-none text-cornflower sm:-mt-8 sm:text-[6rem] lg:ml-40"
+              className="mt-1 block font-script text-[14vw] normal-case leading-none text-cornflower sm:text-[6rem] lg:ml-40"
             >
               Decor
             </motion.span>
           </h1>
-          <motion.p variants={rise(0.8)} className="mx-auto mt-6 max-w-md font-serif text-xl italic text-ink/70 lg:mx-0">
-            {tagline.join(' ')}
-          </motion.p>
+          <motion.p variants={rise(0.8)} className="eyebrow mx-auto mt-8 text-rust">Flower boutique · Weddings · Events</motion.p>
           <motion.p variants={rise(0.9)} className="mx-auto mt-4 max-w-md leading-relaxed text-ink/70 lg:mx-0">
             Floral arches, candlelit receptions and every soft detail in between — designed around the two of you.
           </motion.p>
@@ -56,8 +51,8 @@ export default function Hero({ ready }) {
             <div className="absolute -inset-3 rounded-t-full border border-navy/40" />
             <div className="h-full overflow-hidden rounded-t-full shadow-2xl shadow-navy/20">
               <motion.img
-                src={img('floral-wall-couple')}
-                alt="Couple beneath a floral wall"
+                src={img('terracotta-long-tables')}
+                alt="Long reception tables styled with roses in terracotta vases"
                 className="h-full w-full object-cover"
                 initial={{ scale: 1.3 }}
                 animate={ready ? { scale: 1 } : {}}

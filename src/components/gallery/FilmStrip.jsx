@@ -13,7 +13,7 @@ export default function FilmStrip({ onOpen }) {
   const xB = useTransform(scrollYProgress, [0, 1], ['-30%', '0%'])
 
   return (
-    <section ref={ref} className="overflow-hidden bg-navy py-20 md:py-28">
+    <section ref={ref} className="overflow-hidden bg-mahogany py-20 md:py-28">
       <div className="mb-12 px-5 text-center">
         <p className="eyebrow text-dusk">In motion</p>
         <h2 className="mt-3 font-serif text-4xl font-light text-paper sm:text-6xl">Moments We Adore</h2>

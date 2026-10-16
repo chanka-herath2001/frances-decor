@@ -101,7 +101,7 @@ export default function InquiryForm({ date }) {
 
             <Field label="Tell us about your day" as="textarea" value={form.message} onChange={set('message')} />
 
-            <p className="mt-4 text-sm text-navy/60">Date: <span className="font-serif text-base italic text-navy">{date ? date.toDateString() : 'pick one on the calendar'}</span></p>
+            <p className="mt-4 text-sm text-navy/60">Date: <span className="font-serif text-base text-navy">{date ? date.toDateString() : 'pick one on the calendar'}</span></p>
             <button type="submit" className="group mt-6 inline-flex w-full items-center justify-center gap-3 bg-navy py-4 text-paper transition hover:bg-ink sm:w-auto sm:px-12">
               <span className="eyebrow">Send inquiry</span>
               <span className="transition-transform group-hover:translate-x-1">→</span>

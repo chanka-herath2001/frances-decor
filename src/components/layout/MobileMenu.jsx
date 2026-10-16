@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { motion } from 'motion/react'
-import { navLinks, contact, tagline } from '../../data/site'
+import { navLinks, contact } from '../../data/site'
 import { stopScroll } from './SmoothScroll'
 import { Rose } from '../ui/Botanical'
 
@@ -41,7 +41,7 @@ export default function MobileMenu({ onClose }) {
         ))}
       </ul>
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }} className="space-y-2">
-        <p className="font-script text-3xl text-dusk">{tagline[0]}</p>
+        <img src="/images/logo-light.png" alt="" className="mb-4 h-14 w-auto" />
         <a href={`mailto:${contact.email}`} className="eyebrow block text-paper/80">{contact.email}</a>
         <a href={`tel:${contact.phoneIntl}`} className="eyebrow block text-paper/80">{contact.phone}</a>
       </motion.div>

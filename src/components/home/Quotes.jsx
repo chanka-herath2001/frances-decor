@@ -14,7 +14,7 @@ export default function Quotes() {
   }, [])
 
   return (
-    <section className="relative overflow-hidden bg-navy py-28 text-paper md:py-36">
+    <section className="relative overflow-hidden bg-moss py-28 text-paper md:py-36">
       <motion.img
         src={img('crystal-curtain')}
         alt=""
@@ -28,7 +28,7 @@ export default function Quotes() {
           <AnimatePresence mode="wait">
             <motion.blockquote
               key={i}
-              className="font-serif text-3xl font-light italic leading-snug sm:text-5xl"
+              className="font-serif text-3xl font-light leading-snug sm:text-5xl"
               initial={{ opacity: 0, y: 30, filter: 'blur(6px)' }}
               animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
               exit={{ opacity: 0, y: -30, filter: 'blur(6px)' }}

@@ -1,69 +1,62 @@
-import { useState } from 'react'
-import { AnimatePresence, motion } from 'motion/react'
-import Reveal from '../ui/Reveal'
+import { motion } from 'motion/react'
+import { Link } from 'react-router-dom'
 import SectionTitle from '../ui/SectionTitle'
 import { services } from '../../data/site'
-import { img } from '../../data/gallery'
 
-// "Weekend schedule" band: numbered services; hovering one swaps the preview photo.
+const tones = {
+  mahogany: { card: 'bg-mahogany text-paper', word: 'text-linen/80', button: 'bg-linen text-mahogany hover:bg-paper' },
+  olive: { card: 'bg-olive text-paper', word: 'text-paper/85', button: 'bg-mahogany text-paper hover:bg-bark' },
+}
+
+// Three tall service cards with a vertical word over each photo (mahogany / olive / mahogany).
 export default function Services() {
-  const [active, setActive] = useState(0)
-  const current = services[active]
-
   return (
-    <section className="relative bg-mist py-24 md:py-32">
-      <img src={img('beach-aisle')} alt="" className="absolute left-0 top-0 hidden h-full w-[14%] object-cover opacity-80 lg:block" />
-      <img src={img('chapel-altar-florals')} alt="" className="absolute right-0 top-0 hidden h-full w-[14%] object-cover opacity-80 lg:block" />
-      <p className="absolute left-[15%] top-10 hidden font-script text-3xl leading-tight text-navy/70 xl:block">
-        Good friends,<br />brighter days
-      </p>
-      <div className="relative mx-auto max-w-5xl px-5 sm:px-8">
-        <SectionTitle eyebrow="What we create" title="Our Services" script="tailored for every occasion" />
-
-        <div className="mt-14 grid gap-10 md:grid-cols-[1fr_1.2fr] md:items-center">
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-t-full shadow-xl shadow-navy/20">
-            <AnimatePresence mode="popLayout">
-              <motion.img
-                key={current.image}
-                src={current.image}
-                alt={current.title}
-                className="absolute inset-0 h-full w-full object-cover"
-                initial={{ opacity: 0, scale: 1.15 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.8 }}
-              />
-            </AnimatePresence>
-          </div>
-
-          <ul className="divide-y divide-navy/15 border-y border-navy/15">
-            {services.map((s, i) => (
-              <Reveal as="li" key={s.no} delay={i * 0.08} from="right">
-                <button
-                  onMouseEnter={() => setActive(i)}
-                  onFocus={() => setActive(i)}
-                  onClick={() => setActive(i)}
-                  className="group grid w-full grid-cols-[3rem_1fr] items-baseline gap-2 py-5 text-left"
-                >
-                  <span className={`eyebrow transition-colors ${active === i ? 'text-navy' : 'text-navy/40'}`}>{s.no}</span>
-                  <span>
-                    <span className={`block font-serif text-2xl uppercase tracking-wide transition-all duration-500 sm:text-3xl ${active === i ? 'translate-x-2 text-navy' : 'text-navy/55'}`}>
-                      {s.title}
-                    </span>
-                    <motion.span
-                      className="block overflow-hidden text-sm leading-relaxed text-ink/70"
-                      animate={{ height: active === i ? 'auto' : 0, opacity: active === i ? 1 : 0 }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      <span className="block pt-2">{s.text}</span>
-                    </motion.span>
-                  </span>
-                </button>
-              </Reveal>
-            ))}
-          </ul>
+    <section className="relative bg-paper py-24 md:py-32">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+        <SectionTitle eyebrow="Ways to work together" title="Our Services" />
+        <div className="mt-16 grid items-center gap-6 md:grid-cols-3 md:gap-8">
+          {services.map((s, i) => (
+            <Card key={s.title} s={s} i={i} />
+          ))}
         </div>
       </div>
     </section>
+  )
+}
+
+function Card({ s, i }) {
+  const t = tones[s.tone]
+  return (
+    <motion.article
+      className={`group relative overflow-hidden rounded-2xl p-5 shadow-[0_18px_40px_rgba(64,37,17,.25)] ${t.card} ${s.featured ? 'md:py-9' : ''}`}
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.8, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
+      whileHover={{ y: -8 }}
+    >
+      <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+        <img src={s.image} alt="" loading="lazy" className="h-full w-full object-cover transition-transform duration-[1.2s] group-hover:scale-110" />
+        <div className="absolute inset-0 bg-gradient-to-l from-black/35 to-transparent" />
+        <span
+          className={`absolute bottom-2 right-1 font-serif text-5xl font-light uppercase leading-none tracking-wide [writing-mode:vertical-rl] sm:text-6xl ${t.word}`}
+          aria-hidden
+        >
+          {s.word}
+        </span>
+      </div>
+      <h3 className="mt-6 text-center font-serif text-2xl uppercase tracking-[0.12em]">{s.title}</h3>
+      <p className="mx-auto mt-3 max-w-xs text-center text-sm leading-relaxed opacity-85">{s.text}</p>
+      <ul className="mt-4 space-y-1 text-center text-xs uppercase tracking-[0.2em] opacity-75">
+        {s.items.map((it) => (
+          <li key={it}>{it}</li>
+        ))}
+      </ul>
+      <div className="mt-6 flex justify-center">
+        <Link to="/contact" className={`rounded-md px-6 py-2 eyebrow transition-colors ${t.button}`}>
+          Enquire
+        </Link>
+      </div>
+    </motion.article>
   )
 }

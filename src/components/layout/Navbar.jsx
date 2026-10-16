@@ -42,7 +42,7 @@ export default function Navbar() {
             <img
               src="/images/logo.png"
               alt="Frances Decor"
-              className={`transition-all duration-500 ${solid ? 'h-14' : 'h-20 sm:h-24'}`}
+              className={`w-auto transition-all duration-500 ${solid ? 'h-10' : 'h-12 sm:h-16'}`}
             />
           </Link>
           <div className="flex items-center justify-end gap-10">

@@ -1,17 +1,14 @@
 import { Link } from 'react-router-dom'
-import { contact, navLinks, tagline } from '../../data/site'
+import { contact, navLinks } from '../../data/site'
 import { Divider } from '../ui/Botanical'
 import Reveal from '../ui/Reveal'
 
 export default function Footer() {
   return (
-    <footer className="relative bg-ink text-paper">
+    <footer className="relative bg-mahogany text-paper">
       <div className="mx-auto max-w-6xl px-5 pb-10 pt-20 sm:px-8">
         <Reveal className="flex flex-col items-center text-center">
-          <div className="flex h-36 w-36 items-center justify-center rounded-full bg-paper shadow-[0_0_0_6px_rgba(246,242,234,.12)]">
-            <img src="/images/logo.png" alt="Frances Decor" className="h-24" />
-          </div>
-          <p className="mt-4 font-script text-3xl text-dusk sm:text-4xl">{tagline.join(' ')}</p>
+          <img src="/images/logo-light.png" alt="Frances Decor Flower Boutique" className="h-20 w-auto sm:h-24" />
           <Divider className="mt-6 w-56 text-paper/40" />
         </Reveal>
 

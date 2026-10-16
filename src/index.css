@@ -1,19 +1,30 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-paper: #f6f2ea;
-  --color-linen: #ede6da;
-  --color-mist: #dbe4ec;
-  --color-dusk: #b6c6d6;
-  --color-cornflower: #6f8fb8;
-  --color-navy: #2b3f63;
-  --color-ink: #1f2a3d;
-  --color-taupe: #8b7765;
-  --color-blush: #ead9d3;
+  /* earthy palette — eggshell base with linen, olive, moss and mahogany sections */
+  --color-paper: #ede7db; /* egg shell */
+  --color-cream: #f7f2e9;
+  --color-linen: #ddccb7;
+  --color-olive: #9b9879;
+  --color-moss: #6a6a53;
+  --color-fern: #81763e;
+  --color-rust: #8d553c;
+  --color-mahogany: #4d342d;
+  --color-bark: #402511;
+
+  /* legacy names used across components, remapped onto the earthy palette */
+  --color-mist: #ddccb7;
+  --color-dusk: #ddccb7;
+  --color-cornflower: #8d553c;
+  --color-navy: #4d342d;
+  --color-ink: #402511;
+  --color-taupe: #6a6a53;
+  --color-blush: #f7e7cd;
 
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Jost', system-ui, sans-serif;
-  --font-script: 'Pinyon Script', cursive;
+  /* accent face: an upright display serif (no italics or slanted script) */
+  --font-script: 'Italiana', 'Cormorant Garamond', serif;
 }
 
 html {

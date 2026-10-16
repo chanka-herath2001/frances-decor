@@ -16,9 +16,9 @@ export default function CTASection({ title = 'Kindly Inquire', text = 'Tell us a
             <img src={img('sunset-aisle')} alt="Sunset wedding aisle" className="h-full w-full object-cover" loading="lazy" />
           </div>
           <div className="absolute -bottom-10 -right-4 flex h-44 w-64 rotate-6 items-center justify-center bg-dusk shadow-xl sm:w-72">
-            <div className="absolute inset-x-0 top-0 h-1/2 bg-[#a3b7cb] [clip-path:polygon(0_0,100%_0,50%_100%)]" />
+            <div className="absolute inset-x-0 top-0 h-1/2 bg-[#cdb9a0] [clip-path:polygon(0_0,100%_0,50%_100%)]" />
             <motion.div
-              className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full bg-paper font-script text-2xl text-navy shadow-[inset_0_0_0_3px_#dbe4ec,0_4px_12px_rgba(0,0,0,.2)]"
+              className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full bg-paper font-script text-2xl text-navy shadow-[inset_0_0_0_3px_#ddccb7,0_4px_12px_rgba(0,0,0,.2)]"
               whileInView={{ rotate: [0, -12, 8, 0], scale: [0.6, 1.1, 1] }}
               viewport={{ once: true }}
               transition={{ duration: 1.2, delay: 0.6 }}

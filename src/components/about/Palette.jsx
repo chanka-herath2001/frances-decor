@@ -5,7 +5,7 @@ import Reveal from '../ui/Reveal'
 import { palette } from '../../data/site'
 import { img } from '../../data/gallery'
 
-const dark = new Set(['Cornflower', 'Navy'])
+const dark = new Set(['Olive', 'Moss', 'Rust', 'Mahogany'])
 
 // Interactive swatch strip inspired by the invitation's colour guide.
 export default function Palette() {

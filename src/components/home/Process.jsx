@@ -29,7 +29,7 @@ export default function Process() {
                   <motion.span
                     className="absolute left-4 top-2 z-10 h-4 w-4 -translate-x-1/2 rounded-full border border-navy bg-paper md:left-1/2"
                     initial={{ scale: 0 }}
-                    whileInView={{ scale: 1, backgroundColor: '#2b3f63' }}
+                    whileInView={{ scale: 1, backgroundColor: '#4d342d' }}
                     viewport={{ once: true, amount: 1 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                   />

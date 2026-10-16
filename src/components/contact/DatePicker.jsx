@@ -75,7 +75,7 @@ export default function DatePicker({ value, onChange }) {
         })}
       </div>
 
-      <p className="mt-5 min-h-6 border-t border-navy/15 pt-4 text-center font-serif italic text-navy/80">
+      <p className="mt-5 min-h-6 border-t border-navy/15 pt-4 text-center font-serif text-navy/80">
         {value ? `${fmt(value)} · Your wedding day` : 'Tap a date to begin your countdown'}
       </p>
     </div>

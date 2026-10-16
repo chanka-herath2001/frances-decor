@@ -6,6 +6,8 @@ import Statement from '../components/home/Statement'
 import FeaturedWork from '../components/home/FeaturedWork'
 import Process from '../components/home/Process'
 import Quotes from '../components/home/Quotes'
+import TropicalVows from '../components/home/TropicalVows'
+import Reels from '../components/home/Reels'
 import Marquee from '../components/ui/Marquee'
 import CTASection from '../components/ui/CTASection'
 
@@ -18,9 +20,11 @@ export default function Home({ ready = true }) {
       <Marquee items={ribbon} />
       <Welcome />
       <Services />
+      <TropicalVows />
       <FeaturedWork />
       <Statement />
       <Process />
+      <Reels />
       <Quotes />
       <CTASection />
     </Page>

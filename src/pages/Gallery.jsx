@@ -7,6 +7,7 @@ import GalleryFilter from '../components/gallery/GalleryFilter'
 import MasonryGrid from '../components/gallery/MasonryGrid'
 import Lightbox from '../components/gallery/Lightbox'
 import FilmStrip from '../components/gallery/FilmStrip'
+import Reels from '../components/home/Reels'
 import CTASection from '../components/ui/CTASection'
 import { gallery, categories, img } from '../data/gallery'
 
@@ -33,6 +34,7 @@ export default function Gallery() {
       </section>
 
       <FilmStrip onOpen={openIn(gallery)} />
+      <Reels tone="bg-moss" />
       <CTASection title="Picture Yours" />
 
       <AnimatePresence>

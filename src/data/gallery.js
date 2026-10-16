@@ -1,6 +1,9 @@
 // Frances Decor portfolio photos, served from public/images/photos/<id>.webp
 // shape: 'tall' | 'wide' | undefined (standard landscape)
 const raw = [
+  ['terracotta-long-tables', 'reception', 'Terracotta Supper', 'tall'],
+  ['terracotta-centrepiece', 'reception', 'Roses & Clay', 'tall'],
+  ['terracotta-roses-table', 'florals', 'Garden Roses in Terracotta', 'tall'],
   ['couple-garden-kiss', 'couples', 'A Garden Kiss', 'tall'],
   ['forest-aisle', 'ceremony', 'Forest Aisle', 'wide'],
   ['blush-arch-vows', 'ceremony', 'Blush Arch Vows', 'wide'],

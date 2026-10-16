@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'motion/react'
-import Doorway from './components/intro/Doorway'
+import EnvelopeIntro from './components/intro/EnvelopeIntro'
 import Navbar from './components/layout/Navbar'
 import SmoothScroll, { scrollToTop } from './components/layout/SmoothScroll'
 import Home from './pages/Home'
@@ -9,7 +9,7 @@ import About from './pages/About'
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
 
-const INTRO_KEY = 'fd-entered'
+const INTRO_KEY = 'fd-opened'
 
 function hasEntered() {
   try {
@@ -34,7 +34,7 @@ export default function App() {
 
   return (
     <SmoothScroll paused={!entered}>
-      <AnimatePresence>{!entered && <Doorway key="door" onEnter={enter} />}</AnimatePresence>
+      <AnimatePresence>{!entered && <EnvelopeIntro key="letter" onOpen={enter} />}</AnimatePresence>
       <Navbar />
       <AnimatePresence mode="wait" onExitComplete={scrollToTop}>
         <Routes location={location} key={location.pathname}>
