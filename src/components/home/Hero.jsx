@@ -51,8 +51,8 @@ export default function Hero({ ready }) {
             <div className="absolute -inset-3 rounded-t-full border border-navy/40" />
             <div className="h-full overflow-hidden rounded-t-full shadow-2xl shadow-navy/20">
               <motion.img
-                src={img('terracotta-long-tables')}
-                alt="Long reception tables styled with roses in terracotta vases"
+                src={img('floral-wall-couple')}
+                alt="Couple beneath a floral wall"
                 className="h-full w-full object-cover"
                 initial={{ scale: 1.3 }}
                 animate={ready ? { scale: 1 } : {}}

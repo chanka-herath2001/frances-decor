@@ -21,7 +21,7 @@ export default function Statement() {
           style={{ y: photoY, rotate }}
           className="absolute left-[10%] top-[18%] w-[52%] border-[6px] border-paper shadow-2xl md:w-[48%]"
         >
-          <img src={img('terracotta-roses-table')} alt="Garden roses in terracotta vases on a long table" className="aspect-[4/5] w-full object-cover" loading="lazy" />
+          <img src={img('floral-doorway-exit')} alt="Couple leaving through a floral doorway" className="aspect-[4/5] w-full object-cover" loading="lazy" />
         </motion.div>
         <motion.p
           style={{ y: textY }}
