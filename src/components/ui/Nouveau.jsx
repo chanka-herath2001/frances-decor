@@ -64,6 +64,15 @@ export function NouveauPanel({ className = 'w-40', animate = true, opacity = 1 }
   )
 }
 
+// Single tulip sprig cropped from the top of one vine — the small accent beside headings.
+export function NouveauSprig({ className = 'w-20', flip = false }) {
+  return (
+    <svg viewBox="22 30 84 300" className={className} style={flip ? { transform: 'scaleX(-1)' } : undefined} aria-hidden>
+      <Half animate />
+    </svg>
+  )
+}
+
 // Small crowning tulip with mirrored swirls — used as a section divider.
 export function NouveauCrown({ className = 'w-56' }) {
   return (

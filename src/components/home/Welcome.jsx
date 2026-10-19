@@ -2,7 +2,7 @@ import Reveal from '../ui/Reveal'
 import SectionTitle from '../ui/SectionTitle'
 import FramedImage from '../ui/FramedImage'
 import Button from '../ui/Button'
-import { Rose } from '../ui/Botanical'
+import { NouveauSprig } from '../ui/Nouveau'
 import { img } from '../../data/gallery'
 
 export default function Welcome() {
@@ -18,7 +18,7 @@ export default function Welcome() {
         </div>
 
         <div className="relative pt-10 md:pt-0">
-          <Rose className="absolute -top-16 right-0 w-24 text-navy/40 sm:w-32" />
+          <NouveauSprig className="absolute -top-20 right-0 w-14 sm:w-20" />
           <SectionTitle align="left" eyebrow="Welcome" title="We’re so glad you’re here." />
           <Reveal delay={0.2}>
             <p className="mt-6 max-w-md leading-relaxed text-ink/75">

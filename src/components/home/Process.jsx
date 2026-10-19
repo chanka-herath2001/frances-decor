@@ -3,7 +3,7 @@ import { motion, useScroll, useSpring } from 'motion/react'
 import SectionTitle from '../ui/SectionTitle'
 import { NouveauBorder } from '../ui/Nouveau'
 import Reveal from '../ui/Reveal'
-import { Butterfly } from '../ui/Botanical'
+import { NouveauSprig } from '../ui/Nouveau'
 import { process } from '../../data/site'
 
 // Invitation-style timeline: the centre line draws itself as you scroll.
@@ -16,7 +16,7 @@ export default function Process() {
     <section className="relative overflow-hidden py-24 md:py-36">
       <NouveauBorder side="left" opacity={0.45} />
       <NouveauBorder side="right" opacity={0.45} />
-      <Butterfly className="absolute right-[8%] top-24 w-20 text-navy/50 sm:w-28" />
+      <NouveauSprig className="absolute right-[8%] top-20 w-12 sm:w-16" />
       <div className="mx-auto max-w-4xl px-5 sm:px-8">
         <SectionTitle eyebrow="How it works" title="From Hello to Happily" script="our gentle process" />
 

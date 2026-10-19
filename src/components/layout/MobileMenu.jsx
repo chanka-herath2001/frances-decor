@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { motion } from 'motion/react'
 import { navLinks, contact } from '../../data/site'
 import { stopScroll } from './SmoothScroll'
-import { Rose } from '../ui/Botanical'
+import { NouveauSprig } from '../ui/Nouveau'
 
 export default function MobileMenu({ onClose }) {
   useEffect(() => {
@@ -19,7 +19,7 @@ export default function MobileMenu({ onClose }) {
       exit={{ clipPath: 'circle(0% at 92% 4%)' }}
       transition={{ duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
     >
-      <Rose className="absolute -right-6 bottom-24 w-40 text-paper/15" />
+      <div className="absolute -right-2 bottom-24 w-24 opacity-30"><NouveauSprig className="w-full" /></div>
       <ul className="space-y-4">
         {navLinks.map((l, i) => (
           <motion.li

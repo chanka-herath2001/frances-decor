@@ -2,7 +2,7 @@ import { motion } from 'motion/react'
 import SectionTitle from '../ui/SectionTitle'
 import FramedImage from '../ui/FramedImage'
 import Reveal from '../ui/Reveal'
-import { Rose, Butterfly } from '../ui/Botanical'
+import { NouveauSprig } from '../ui/Nouveau'
 import { img } from '../../data/gallery'
 
 const steps = [
@@ -29,8 +29,8 @@ export default function Journey() {
                   <Reveal from={flip ? 'left' : 'right'} className="relative [direction:ltr]">
                     <span className="font-serif text-7xl font-light text-navy/15">0{i + 1}</span>
                     <p className="-mt-6 max-w-xs font-serif text-2xl leading-snug text-navy">{s.text}</p>
-                    {i === 0 && <Rose className="absolute -right-2 -top-8 hidden w-24 text-navy/50 sm:block" />}
-                    {i === 1 && <Butterfly className="absolute -top-6 right-6 hidden w-20 text-navy/50 sm:block" />}
+                    {i === 0 && <NouveauSprig className="absolute -right-2 -top-10 hidden w-14 sm:block" />}
+                    {i === 1 && <NouveauSprig flip className="absolute -top-10 right-6 hidden w-14 sm:block" />}
                   </Reveal>
                 </div>
                 {i < steps.length - 1 && <Arrow flip={flip} />}

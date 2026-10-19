@@ -11,7 +11,7 @@ export default function Reels({ tone = 'bg-mahogany' }) {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionTitle eyebrow="Behind the blooms" title="Content Reels" light />
       </div>
-      <ul className="mt-14 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 sm:gap-6 sm:px-8 lg:justify-center">
+      <ul className="mt-14 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 sm:gap-6 sm:px-8">
         {reels.map((r, i) => (
           <Reel key={r.title} reel={r} index={i} />
         ))}
@@ -51,7 +51,7 @@ function Reel({ reel, index }) {
     >
       <Wrap className="group block h-full w-full" {...link} aria-label={reel.title}>
         {reel.video ? (
-          <video ref={video} src={reel.video} poster={reel.poster} muted={muted} loop playsInline className="h-full w-full object-cover" />
+          <video ref={video} src={reel.video} poster={reel.poster} muted={muted} loop playsInline preload="none" className="h-full w-full object-cover" />
         ) : (
           <img src={reel.poster} alt="" loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
         )}

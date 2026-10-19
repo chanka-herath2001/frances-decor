@@ -80,14 +80,24 @@ export const palette = [
 // (add them to public/images/photos and data/gallery.js, then list their ids here).
 export const tropical = ['beach-monstera-aisle', 'beach-arch-kiss', 'beach-floral-mandap', 'monstera-arch-couple', 'beach-floral-aisle', 'seaside-canopy-ceremony', 'barefoot-vows']
 
-// Content reels. Drop vertical videos into public/reels/ and set `video`,
-// or set `href` to the Instagram reel link. Until then each tile shows its poster.
+// Content reels: compressed 540p clips in public/reels/ (posters are the frame at ~2s).
 export const reels = [
-  { title: 'Monstera arch by the sea', poster: img('beach-monstera-arch'), video: null, href: null },
-  { title: 'A forest arch', poster: img('forest-white-arch'), video: null, href: null },
-  { title: 'Lantern glow', poster: img('lantern-reception'), video: null, href: null },
-  { title: 'Bouquet in the making', poster: img('orchid-cascade-bride'), video: null, href: null },
-  { title: 'Aisle set-up', poster: img('cathedral-aisle-blooms'), video: null, href: null },
+  { title: 'Cinnamon Bentota', poster: '/reels/26-03-2026-cinnamon-bentota-poruwa-reception.jpg', video: '/reels/26-03-2026-cinnamon-bentota-poruwa-reception.mp4', href: null },
+  { title: 'Hilton', poster: '/reels/29-01-2026-hilton.jpg', video: '/reels/29-01-2026-hilton.mp4', href: null },
+  { title: 'Marriott Weligama', poster: '/reels/26-01-2026-marriott-weligama.jpg', video: '/reels/26-01-2026-marriott-weligama.mp4', href: null },
+  { title: 'Villa by CC', poster: '/reels/11-01-2026-villa-by-cc.jpg', video: '/reels/11-01-2026-villa-by-cc.mp4', href: null },
+  { title: 'La Belle Époque', poster: '/reels/27-12-2025-la-belle-epoque.jpg', video: '/reels/27-12-2025-la-belle-epoque.mp4', href: null },
+  { title: 'Taj Samudra', poster: '/reels/14-12-2025-taj-samudra.jpg', video: '/reels/14-12-2025-taj-samudra.mp4', href: null },
+  { title: 'Tropical welcome', poster: '/reels/video-2025-11-11-10-27-39-pm.jpg', video: '/reels/video-2025-11-11-10-27-39-pm.mp4', href: null },
+  { title: 'Welcome backdrop', poster: '/reels/video-2025-08-07-7-02-17-am.jpg', video: '/reels/video-2025-08-07-7-02-17-am.mp4', href: null },
+  { title: 'Island love', poster: '/reels/video-2025-07-22-9-31-22-am.jpg', video: '/reels/video-2025-07-22-9-31-22-am.mp4', href: null },
+  { title: 'Mehendi florals', poster: '/reels/video-2025-06-30-10-25-29-am.jpg', video: '/reels/video-2025-06-30-10-25-29-am.mp4', href: null },
+  { title: 'Garden gathering', poster: '/reels/video-2025-04-12-10-16-14-pm.jpg', video: '/reels/video-2025-04-12-10-16-14-pm.mp4', href: null },
+  { title: 'White bloom carpet', poster: '/reels/video-2025-03-19-8-00-35-am.jpg', video: '/reels/video-2025-03-19-8-00-35-am.mp4', href: null },
+  { title: 'Floating candles', poster: '/reels/video-2025-03-07-6-27-44-am.jpg', video: '/reels/video-2025-03-07-6-27-44-am.mp4', href: null },
+  { title: 'Heliconia & ginger', poster: '/reels/video-2024-12-15-9-34-34-am.jpg', video: '/reels/video-2024-12-15-9-34-34-am.mp4', href: null },
+  { title: 'Seating chart details', poster: '/reels/video-2024-11-24-9-03-40-am.jpg', video: '/reels/video-2024-11-24-9-03-40-am.mp4', href: null },
+  { title: 'Candlelit corridor', poster: '/reels/video-2024-11-21-1-39-49-pm.jpg', video: '/reels/video-2024-11-21-1-39-49-pm.mp4', href: null },
 ]
 
 export const faqs = [

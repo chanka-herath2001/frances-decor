@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Pricing quote (contains bank details) — never commit
+quotation/
