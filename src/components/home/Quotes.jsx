@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
-import { Divider } from '../ui/Botanical'
+import { NouveauCrown } from '../ui/Nouveau'
 import { quotes } from '../../data/site'
 import { img } from '../../data/gallery'
 
@@ -16,7 +16,7 @@ export default function Quotes() {
   return (
     <section className="relative overflow-hidden bg-moss py-28 text-paper md:py-36">
       <motion.img
-        src={img('crystal-curtain')}
+        src={img('marquee-fairy-lights')}
         alt=""
         className="absolute inset-0 h-full w-full object-cover opacity-20 mix-blend-luminosity"
         animate={{ scale: [1.05, 1.15, 1.05] }}
@@ -38,7 +38,7 @@ export default function Quotes() {
             </motion.blockquote>
           </AnimatePresence>
         </div>
-        <Divider className="mx-auto mt-8 w-56 text-paper/40" />
+        <NouveauCrown className="mx-auto mt-8 w-56" />
         <div className="mt-8 flex justify-center gap-3">
           {quotes.map((_, k) => (
             <button

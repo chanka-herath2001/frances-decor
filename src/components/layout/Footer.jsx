@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { contact, navLinks } from '../../data/site'
-import { Divider } from '../ui/Botanical'
+import { NouveauCrown } from '../ui/Nouveau'
 import Reveal from '../ui/Reveal'
 
 export default function Footer() {
@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-5 pb-10 pt-20 sm:px-8">
         <Reveal className="flex flex-col items-center text-center">
           <img src="/images/logo-light.png" alt="Frances Decor Flower Boutique" className="h-20 w-auto sm:h-24" />
-          <Divider className="mt-6 w-56 text-paper/40" />
+          <NouveauCrown className="mt-6 w-56" />
         </Reveal>
 
         <div className="mt-14 grid gap-10 text-center sm:grid-cols-3 sm:text-left">

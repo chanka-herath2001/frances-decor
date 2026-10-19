@@ -1,6 +1,7 @@
 import { motion } from 'motion/react'
 import { Link } from 'react-router-dom'
 import SectionTitle from '../ui/SectionTitle'
+import { NouveauBorder } from '../ui/Nouveau'
 import { services } from '../../data/site'
 
 const tones = {
@@ -11,7 +12,9 @@ const tones = {
 // Three tall service cards with a vertical word over each photo (mahogany / olive / mahogany).
 export default function Services() {
   return (
-    <section className="relative bg-paper py-24 md:py-32">
+    <section className="relative overflow-hidden bg-paper py-24 md:py-32">
+      <NouveauBorder side="left" opacity={0.4} />
+      <NouveauBorder side="right" opacity={0.4} />
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionTitle eyebrow="Ways to work together" title="Our Services" />
         <div className="mt-16 grid items-center gap-6 md:grid-cols-3 md:gap-8">
@@ -39,7 +42,7 @@ function Card({ s, i }) {
         <img src={s.image} alt="" loading="lazy" className="h-full w-full object-cover transition-transform duration-[1.2s] group-hover:scale-110" />
         <div className="absolute inset-0 bg-gradient-to-l from-black/35 to-transparent" />
         <span
-          className={`absolute bottom-2 right-1 font-serif text-5xl font-light uppercase leading-none tracking-wide [writing-mode:vertical-rl] sm:text-6xl ${t.word}`}
+          className={`absolute bottom-2 right-1 font-serif text-4xl font-light uppercase leading-none tracking-wide [writing-mode:vertical-rl] lg:text-5xl ${t.word}`}
           aria-hidden
         >
           {s.word}

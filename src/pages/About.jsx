@@ -11,7 +11,7 @@ import { img } from '../data/gallery'
 export default function About() {
   return (
     <Page>
-      <PageHero eyebrow="About Frances Decor" title="Our Story" script="flowers, light & love" image={img('drape-floral-arch')} badge="Designed by hand · With love · " />
+      <PageHero eyebrow="About Frances Decor" title="Our Story" script="flowers, light & love" image={img('white-orchid-church-arch')} badge="Designed by hand · With love · " />
       <Story />
       <Marquee items={['Personal', 'Abundant', 'Calm', 'Romantic', 'Timeless']} speed={30} />
       <Journey />

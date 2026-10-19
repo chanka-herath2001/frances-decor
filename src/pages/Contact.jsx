@@ -15,7 +15,7 @@ export default function Contact() {
 
   return (
     <Page>
-      <PageHero eyebrow="Contact" title="Say Hello" script="we’d love to hear your story" image={img('gold-welcome-sign')} badge="Kindly respond · With love · " />
+      <PageHero eyebrow="Contact" title="Say Hello" script="we’d love to hear your story" image={img('pastel-posy')} badge="Kindly respond · With love · " />
       <ContactCards />
 
       <section className="relative py-16 md:py-24">

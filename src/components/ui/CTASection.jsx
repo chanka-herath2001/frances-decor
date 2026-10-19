@@ -1,19 +1,19 @@
 import { motion } from 'motion/react'
 import Button from './Button'
 import Reveal from './Reveal'
-import { Branch } from './Botanical'
+import { NouveauBorder } from './Nouveau'
 import { img } from '../../data/gallery'
 
 // "Kindly Respond" style closing call-to-action with a wax-seal envelope.
 export default function CTASection({ title = 'Kindly Inquire', text = 'Tell us about your date, your venue and the feeling you want guests to walk into. We will reply within a few days.' }) {
   return (
     <section className="relative overflow-hidden bg-mist py-24 md:py-32">
-      <Branch className="absolute -left-10 top-10 w-64 rotate-12 text-navy/30" />
-      <Branch className="absolute -right-10 bottom-6 w-64 -rotate-[160deg] text-navy/30" />
+      <NouveauBorder side="left" />
+      <NouveauBorder side="right" />
       <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 sm:px-8 md:grid-cols-2">
         <Reveal from="left" className="relative mx-auto w-full max-w-sm">
           <div className="relative aspect-[4/3] -rotate-3 overflow-hidden shadow-2xl shadow-navy/20">
-            <img src={img('sunset-aisle')} alt="Sunset wedding aisle" className="h-full w-full object-cover" loading="lazy" />
+            <img src={img('beach-floral-aisle')} alt="Beach aisle lined with flowers" className="h-full w-full object-cover" loading="lazy" />
           </div>
           <div className="absolute -bottom-10 -right-4 flex h-44 w-64 rotate-6 items-center justify-center bg-dusk shadow-xl sm:w-72">
             <div className="absolute inset-x-0 top-0 h-1/2 bg-[#cdb9a0] [clip-path:polygon(0_0,100%_0,50%_100%)]" />

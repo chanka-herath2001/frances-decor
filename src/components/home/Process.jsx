@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { motion, useScroll, useSpring } from 'motion/react'
 import SectionTitle from '../ui/SectionTitle'
+import { NouveauBorder } from '../ui/Nouveau'
 import Reveal from '../ui/Reveal'
 import { Butterfly } from '../ui/Botanical'
 import { process } from '../../data/site'
@@ -13,6 +14,8 @@ export default function Process() {
 
   return (
     <section className="relative overflow-hidden py-24 md:py-36">
+      <NouveauBorder side="left" opacity={0.45} />
+      <NouveauBorder side="right" opacity={0.45} />
       <Butterfly className="absolute right-[8%] top-24 w-20 text-navy/50 sm:w-28" />
       <div className="mx-auto max-w-4xl px-5 sm:px-8">
         <SectionTitle eyebrow="How it works" title="From Hello to Happily" script="our gentle process" />
@@ -29,7 +32,7 @@ export default function Process() {
                   <motion.span
                     className="absolute left-4 top-2 z-10 h-4 w-4 -translate-x-1/2 rounded-full border border-navy bg-paper md:left-1/2"
                     initial={{ scale: 0 }}
-                    whileInView={{ scale: 1, backgroundColor: '#4d342d' }}
+                    whileInView={{ scale: 1, backgroundColor: '#402511' }}
                     viewport={{ once: true, amount: 1 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                   />

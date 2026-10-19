@@ -5,19 +5,19 @@
   --color-paper: #ede7db; /* egg shell */
   --color-cream: #f7f2e9;
   --color-linen: #ddccb7;
-  --color-olive: #9b9879;
+  --color-olive: #81763e; /* client-picked olive */
   --color-moss: #6a6a53;
   --color-fern: #81763e;
   --color-rust: #8d553c;
-  --color-mahogany: #4d342d;
-  --color-bark: #402511;
+  --color-mahogany: #402511; /* client-picked dark brown */
+  --color-bark: #2b180b;
 
   /* legacy names used across components, remapped onto the earthy palette */
   --color-mist: #ddccb7;
   --color-dusk: #ddccb7;
   --color-cornflower: #8d553c;
-  --color-navy: #4d342d;
-  --color-ink: #402511;
+  --color-navy: #402511;
+  --color-ink: #2b180b;
   --color-taupe: #6a6a53;
   --color-blush: #f7e7cd;
 

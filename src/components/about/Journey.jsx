@@ -6,9 +6,9 @@ import { Rose, Butterfly } from '../ui/Botanical'
 import { img } from '../../data/gallery'
 
 const steps = [
-  { image: img('couple-garden-kiss'), text: 'It begins with a conversation — a few photos, a colour you love, a venue you can already picture.' },
-  { image: img('seaside-drape-arch'), text: 'We sketch, source and test, turning ideas into arches, aisles and tables you can walk through.' },
-  { image: img('couple-portrait'), text: 'And then the day arrives: the doors open, the candles are lit, and the room finally feels like you.' },
+  { image: img('mountain-vows'), text: 'It begins with a conversation — a few photos, a colour you love, a venue you can already picture.' },
+  { image: img('seaside-canopy-ceremony'), text: 'We sketch, source and test, turning ideas into arches, aisles and tables you can walk through.' },
+  { image: img('beach-arch-kiss'), text: 'And then the day arrives: the doors open, the candles are lit, and the room finally feels like you.' },
 ]
 
 // Zig-zag "A Journey of Love" with hand-drawn dashed arrows between moments.

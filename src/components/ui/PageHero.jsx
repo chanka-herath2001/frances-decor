@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'motion/react'
 import { RevealText } from './Reveal'
-import { Branch } from './Botanical'
+import { NouveauPanel } from './Nouveau'
 import CircleText from './CircleText'
 
 // Shared inner-page header: oversized serif title beside an arched photo window.
@@ -14,7 +14,7 @@ export default function PageHero({ eyebrow, title, script, image, badge = 'Franc
 
   return (
     <section ref={ref} className="relative overflow-hidden bg-paper pb-16 pt-32 sm:pt-40 md:pb-24">
-      <Branch className="absolute -left-16 top-24 w-72 rotate-[20deg] text-navy/15" />
+      <NouveauPanel className="pointer-events-none absolute -left-8 top-16 w-28 sm:w-40" opacity={0.4} />
       <div className="relative mx-auto grid max-w-6xl items-end gap-12 px-5 sm:px-8 md:grid-cols-[1.25fr_1fr]">
         <motion.div style={{ y: textY }} className="relative z-10">
           <motion.p

@@ -5,7 +5,7 @@ import Reveal from '../ui/Reveal'
 import { palette } from '../../data/site'
 import { img } from '../../data/gallery'
 
-const dark = new Set(['Olive', 'Moss', 'Rust', 'Mahogany'])
+const dark = new Set(['Olive', 'Moss', 'Rust', 'Dark Brown'])
 
 // Interactive swatch strip inspired by the invitation's colour guide.
 export default function Palette() {
@@ -48,7 +48,7 @@ export default function Palette() {
 
         <Reveal from="right" className="relative mx-auto w-full max-w-sm">
           <div className="relative aspect-[4/5] overflow-hidden rounded-t-full border-[10px] border-paper shadow-2xl">
-            <img src={img('blue-hydrangea-centerpiece')} alt="Blue hydrangea and white rose centrepiece" className="h-full w-full object-cover" loading="lazy" />
+            <img src={img('hydrangea-centrepiece')} alt="Hydrangea centrepiece with candlelight" className="h-full w-full object-cover" loading="lazy" />
             <motion.div className="absolute inset-0 mix-blend-color" animate={{ backgroundColor: active.hex, opacity: 0.35 }} />
           </div>
           <motion.p

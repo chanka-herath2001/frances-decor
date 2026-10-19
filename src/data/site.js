@@ -23,7 +23,7 @@ export const services = [
     title: 'Ceremony Styling',
     text: 'Floral arches, draped canopies, aisles and altars that frame the moment you say “I do”.',
     items: ['Arches & moon gates', 'Aisle florals & candles', 'Church & garden styling'],
-    image: img('blush-arch-vows'),
+    image: img('peach-drape-poruwa'),
     tone: 'mahogany',
   },
   {
@@ -31,7 +31,7 @@ export const services = [
     title: 'Full Wedding Design',
     text: 'One look carried from the welcome sign to the last dance — ceremony, reception and every detail between.',
     items: ['Concept & moodboard', 'Ceremony + reception', 'Bridal & party florals'],
-    image: img('candle-head-table'),
+    image: img('white-arch-head-table'),
     tone: 'olive',
     featured: true,
   },
@@ -54,10 +54,10 @@ export const process = [
 
 export const featured = [
   { title: 'Terracotta Supper', place: 'Long-table reception', image: img('terracotta-long-tables') },
-  { title: 'A Sunset Promise', place: 'Seaside ceremony', image: img('sunset-aisle') },
-  { title: 'Under the Canopy', place: 'Forest ceremony', image: img('forest-aisle') },
-  { title: 'Blush & Branches', place: 'Indoor vows', image: img('blush-arch-vows') },
-  { title: 'Moon Arch', place: 'Beach at golden hour', image: img('circle-arch-sunset') },
+  { title: 'Seaside Vows', place: 'Beach ceremony', image: img('beach-floral-aisle') },
+  { title: 'Ceremony With a View', place: 'Mountain valley', image: img('mountain-ceremony-benches') },
+  { title: 'Peach Poruwa', place: 'Garden ceremony', image: img('peach-drape-poruwa') },
+  { title: 'Monstera Arch', place: 'Beach ceremony', image: img('beach-monstera-arch') },
 ]
 
 export const quotes = [
@@ -70,24 +70,24 @@ export const quotes = [
 export const palette = [
   { name: 'Egg Shell', hex: '#ede7db' },
   { name: 'Linen', hex: '#ddccb7' },
-  { name: 'Olive', hex: '#9b9879' },
+  { name: 'Olive', hex: '#81763e' },
   { name: 'Moss', hex: '#6a6a53' },
   { name: 'Rust', hex: '#8d553c' },
-  { name: 'Mahogany', hex: '#4d342d' },
+  { name: 'Dark Brown', hex: '#402511' },
 ]
 
 // "Tropical Vows" setups. TODO: swap in the real tropical-vows photos once supplied
 // (add them to public/images/photos and data/gallery.js, then list their ids here).
-export const tropical = ['beach-aisle', 'seaside-drape-arch', 'circle-arch-sunset', 'sunset-aisle', 'lawn-arch']
+export const tropical = ['beach-monstera-aisle', 'beach-arch-kiss', 'beach-floral-mandap', 'monstera-arch-couple', 'beach-floral-aisle', 'seaside-canopy-ceremony', 'barefoot-vows']
 
 // Content reels. Drop vertical videos into public/reels/ and set `video`,
 // or set `href` to the Instagram reel link. Until then each tile shows its poster.
 export const reels = [
-  { title: 'Moon arch at sunset', poster: img('circle-arch-sunset'), video: null, href: null },
-  { title: 'Building a floral wall', poster: img('floral-wall-couple'), video: null, href: null },
-  { title: 'Candlelit head table', poster: img('candlelit-banquet'), video: null, href: null },
-  { title: 'Bouquet in the making', poster: img('bride-red-bouquet'), video: null, href: null },
-  { title: 'Aisle set-up', poster: img('candlelit-church-aisle'), video: null, href: null },
+  { title: 'Monstera arch by the sea', poster: img('beach-monstera-arch'), video: null, href: null },
+  { title: 'A forest arch', poster: img('forest-white-arch'), video: null, href: null },
+  { title: 'Lantern glow', poster: img('lantern-reception'), video: null, href: null },
+  { title: 'Bouquet in the making', poster: img('orchid-cascade-bride'), video: null, href: null },
+  { title: 'Aisle set-up', poster: img('cathedral-aisle-blooms'), video: null, href: null },
 ]
 
 export const faqs = [

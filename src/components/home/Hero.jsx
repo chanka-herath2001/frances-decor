@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'motion/react'
 import Button from '../ui/Button'
 import CircleText from '../ui/CircleText'
-import { Branch } from '../ui/Botanical'
+import { NouveauPanel } from '../ui/Nouveau'
 import { img } from '../../data/gallery'
 
 const ease = [0.22, 1, 0.36, 1]
@@ -18,7 +18,8 @@ export default function Hero({ ready }) {
 
   return (
     <section ref={ref} className="relative min-h-[100svh] overflow-hidden bg-paper pb-20 pt-32 md:pt-36">
-      <Branch className="absolute -right-10 top-28 w-72 -rotate-[30deg] text-navy/15" />
+      <NouveauPanel className="pointer-events-none absolute -right-6 top-20 hidden w-44 md:block lg:w-56" opacity={0.45} />
+      <NouveauPanel className="pointer-events-none absolute -left-10 bottom-0 hidden w-32 lg:block" opacity={0.3} />
       <div className="relative mx-auto grid max-w-7xl items-center gap-16 px-5 sm:px-8 lg:grid-cols-[1.1fr_1fr]">
         <motion.div style={{ y: yText }} initial="hidden" animate={state} className="relative z-10 text-center lg:text-left">
           <motion.p variants={rise(0.2)} className="eyebrow text-taupe">Wedding & Event Styling</motion.p>
@@ -51,8 +52,8 @@ export default function Hero({ ready }) {
             <div className="absolute -inset-3 rounded-t-full border border-navy/40" />
             <div className="h-full overflow-hidden rounded-t-full shadow-2xl shadow-navy/20">
               <motion.img
-                src={img('floral-wall-couple')}
-                alt="Couple beneath a floral wall"
+                src={img('forest-white-arch')}
+                alt="Couple under a white floral arch in the forest"
                 className="h-full w-full object-cover"
                 initial={{ scale: 1.3 }}
                 animate={ready ? { scale: 1 } : {}}
@@ -61,7 +62,7 @@ export default function Hero({ ready }) {
             </div>
           </motion.div>
           <motion.div style={{ y: ySmall }} className="absolute bottom-6 left-0 w-[46%] border-[6px] border-paper shadow-xl">
-            <img src={img('circle-arch-sunset')} alt="Floral moon arch at sunset" className="aspect-[4/5] w-full object-cover" />
+            <img src={img('beach-monstera-arch')} alt="Monstera arch on the beach" className="aspect-[4/5] w-full object-cover" />
           </motion.div>
           <CircleText text="Weddings · Events · Florals · " className="absolute right-[-8px] bottom-0 h-28 w-28 sm:h-32 sm:w-32" />
         </motion.div>

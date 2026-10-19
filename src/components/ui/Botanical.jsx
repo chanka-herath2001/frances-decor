@@ -45,23 +45,6 @@ export function Rose({ className = 'w-28 text-navy' }) {
   )
 }
 
-export function Branch({ className = 'w-40 text-navy' }) {
-  return (
-    <Svg viewBox="0 0 200 120" className={className}>
-      <P i={0} d="M6 110C50 90 100 60 194 12" />
-      {[30, 62, 94, 126, 158].map((x, k) => {
-        const y = 110 - (x - 6) * 0.52
-        return (
-          <g key={x}>
-            <P i={k + 1} d={`M${x} ${y}c-4-16 2-28 14-34 2 14-4 26-14 34z`} />
-            <P i={k + 1.5} d={`M${x + 6} ${y - 3}c10 8 22 10 32 4-10-10-22-10-32-4z`} />
-          </g>
-        )
-      })}
-    </Svg>
-  )
-}
-
 export function Arch({ className = 'w-48 text-navy' }) {
   return (
     <Svg viewBox="0 0 200 220" className={className}>
@@ -88,15 +71,6 @@ export function Butterfly({ className = 'w-20 text-navy' }) {
       <P i={2} d="M50 40c-16 2-30 14-24 26 6 10 20 2 24-12" />
       <P i={2} d="M50 40c16 2 30 14 24 26-6 10-20 2-24-12" />
       <P i={3} d="M48 20c-4-8-10-12-14-12M52 20c4-8 10-12 14-12" />
-    </Svg>
-  )
-}
-
-export function Divider({ className = 'w-56 text-navy/60' }) {
-  return (
-    <Svg viewBox="0 0 240 24" className={className}>
-      <P i={0} d="M4 12h92M144 12h92" />
-      <P i={1} d="M120 4c-6 4-6 12 0 16 6-4 6-12 0-16zM108 12c4-5 10-5 12 0-2 5-8 5-12 0zM132 12c-4-5-10-5-12 0 2 5 8 5 12 0z" />
     </Svg>
   )
 }

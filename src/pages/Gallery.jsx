@@ -25,7 +25,7 @@ export default function Gallery() {
 
   return (
     <Page>
-      <PageHero eyebrow="Portfolio" title="Gallery" script="moments we’ve dressed in flowers" image={img('candlelit-banquet')} badge="Ceremonies · Receptions · Florals · " />
+      <PageHero eyebrow="Portfolio" title="Gallery" script="moments we’ve dressed in flowers" image={img('lantern-reception')} badge="Ceremonies · Receptions · Florals · " />
 
       <section className="mx-auto max-w-7xl px-5 pb-24 sm:px-8">
         <SectionTitle eyebrow="Browse by moment" title="Our Work" className="mb-6" />
