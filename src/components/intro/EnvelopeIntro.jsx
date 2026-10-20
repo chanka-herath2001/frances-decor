@@ -19,15 +19,18 @@ function Ribbon({ className, speed = 40 }) {
   )
 }
 
-// First-visit "you've got a letter" screen; opening the envelope reveals the site.
+// First-visit envelope screen: it opens on its own and reveals the site.
 export default function EnvelopeIntro({ onOpen }) {
   const [stage, setStage] = useState(0)
   const timers = useRef([])
 
+  const started = useRef(false)
+
   const open = () => {
-    if (stage) return
+    if (started.current) return
+    started.current = true
     setStage(1)
-    timers.current.push(setTimeout(() => setStage(2), 850), setTimeout(onOpen, 2900))
+    timers.current.push(setTimeout(() => setStage(2), 500), setTimeout(onOpen, 1500))
   }
 
   useEffect(() => {
@@ -36,12 +39,19 @@ export default function EnvelopeIntro({ onOpen }) {
     return () => window.removeEventListener('keydown', onKey)
   })
 
+  // opens by itself shortly after it lands; a click or key press just opens it sooner
+  useEffect(() => {
+    const t = setTimeout(open, 900)
+    return () => clearTimeout(t)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   useEffect(() => () => timers.current.forEach(clearTimeout), [])
 
   return (
     <motion.div
       className="fixed inset-0 z-[80] flex flex-col overflow-hidden bg-mahogany text-paper"
-      exit={{ opacity: 0, transition: { duration: 0.8 } }}
+      exit={{ opacity: 0, transition: { duration: 0.5 } }}
       role="dialog"
       aria-label="A letter from Frances Decor"
     >
@@ -51,18 +61,15 @@ export default function EnvelopeIntro({ onOpen }) {
       <motion.div
         className="relative flex flex-1 flex-col items-center justify-center px-6"
         animate={stage >= 2 ? { scale: [1, 1, 2.6], opacity: [1, 1, 0] } : {}}
-        transition={{ duration: 2, times: [0, 0.5, 1], ease: 'easeIn' }}
+        transition={{ duration: 1.1, times: [0, 0.45, 1], ease: 'easeIn' }}
       >
-        <motion.p className="eyebrow text-center text-linen/80" initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-          You’ve got a letter from
-        </motion.p>
         <motion.img
           src="/images/logo-light.png"
           alt="Frances Decor Flower Boutique"
           className="mb-10 mt-4 h-20 w-auto sm:mb-14 sm:h-24"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.9 }}
+          transition={{ delay: 0.1, duration: 0.5 }}
         />
 
         <motion.button
@@ -71,20 +78,13 @@ export default function EnvelopeIntro({ onOpen }) {
           className="cursor-pointer"
           initial={{ opacity: 0, y: 40, rotate: -4 }}
           animate={{ opacity: 1, y: 0, rotate: stage ? 0 : [-2, 2, -2] }}
-          transition={stage ? { duration: 0.4 } : { opacity: { delay: 0.6 }, y: { delay: 0.6, duration: 0.8 }, rotate: { duration: 4, repeat: Infinity } }}
+          transition={stage ? { duration: 0.4 } : { opacity: { delay: 0.2 }, y: { delay: 0.2, duration: 0.5 }, rotate: { duration: 4, repeat: Infinity } }}
           whileHover={{ scale: 1.03 }}
           autoFocus
         >
           <Envelope stage={stage} />
         </motion.button>
 
-        <motion.p
-          className="eyebrow mt-12 text-center text-linen/80"
-          animate={{ opacity: stage ? 0 : [0.4, 1, 0.4] }}
-          transition={{ duration: 2.2, repeat: stage ? 0 : Infinity }}
-        >
-          Tap the envelope to open
-        </motion.p>
       </motion.div>
 
       <Ribbon className="bg-olive text-paper" speed={50} />

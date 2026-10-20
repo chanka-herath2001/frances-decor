@@ -6,7 +6,7 @@ import Field from './Field'
 const SERVICES = ['Ceremony arch', 'Reception styling', 'Bridal florals', 'Aisle & entrance', 'Signage & details']
 const EVENTS = ['Wedding', 'Engagement', 'Other celebration']
 
-// "Kindly Respond" inquiry card. Opens the visitor's email app with everything filled in.
+// Inquiry card. Opens the visitor's email app with everything filled in.
 export default function InquiryForm({ date }) {
   const [form, setForm] = useState({ name: '', partner: '', email: '', phone: '', venue: '', guests: 150, message: '' })
   const [event, setEvent] = useState(EVENTS[0])
@@ -55,7 +55,7 @@ export default function InquiryForm({ date }) {
         ) : (
           <motion.form key="form" onSubmit={submit} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0, y: -20 }}>
             <p className="eyebrow text-taupe">RSVP · Inquiry</p>
-            <h3 className="mt-2 font-serif text-4xl text-navy sm:text-5xl">Kindly Respond</h3>
+            <h3 className="mt-2 font-serif text-4xl text-navy sm:text-5xl">Send an Inquiry</h3>
 
             <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
               {EVENTS.map((ev) => (

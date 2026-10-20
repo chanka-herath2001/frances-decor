@@ -32,12 +32,10 @@ export default function Hero({ ready }) {
               Decor
             </motion.span>
           </h1>
-          <motion.p variants={rise(0.8)} className="eyebrow mx-auto mt-8 text-rust">Flower boutique · Weddings · Events</motion.p>
-          <motion.p variants={rise(0.9)} className="mx-auto mt-4 max-w-md leading-relaxed text-ink/70 lg:mx-0">
+          <motion.p variants={rise(0.9)} className="mx-auto mt-8 max-w-md leading-relaxed text-ink/70 lg:mx-0">
             Floral arches, candlelit receptions and every soft detail in between — designed around the two of you.
           </motion.p>
           <motion.div variants={rise(1)} className="mt-9 flex flex-wrap justify-center gap-4 lg:justify-start">
-            <Button to="/contact">Plan your day</Button>
             <Button to="/gallery" variant="outline">View gallery</Button>
           </motion.div>
         </motion.div>

@@ -35,7 +35,7 @@ export default function Gallery() {
 
       <FilmStrip onOpen={openIn(gallery)} />
       <Reels tone="bg-moss" />
-      <CTASection title="Picture Yours" />
+      <CTASection />
 
       <AnimatePresence>
         {open && (

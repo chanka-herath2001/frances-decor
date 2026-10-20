@@ -2,8 +2,8 @@
 
 @theme {
   /* earthy palette — eggshell base with linen, olive, moss and mahogany sections */
-  --color-paper: #ede7db; /* egg shell */
-  --color-cream: #f7f2e9;
+  --color-paper: #e8dcc7; /* warm beige base */
+  --color-cream: #f3e9d7;
   --color-linen: #ddccb7;
   --color-olive: #81763e; /* client-picked olive */
   --color-moss: #6a6a53;

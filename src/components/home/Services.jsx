@@ -50,11 +50,6 @@ function Card({ s, i }) {
       </div>
       <h3 className="mt-6 text-center font-serif text-2xl uppercase tracking-[0.12em]">{s.title}</h3>
       <p className="mx-auto mt-3 max-w-xs text-center text-sm leading-relaxed opacity-85">{s.text}</p>
-      <ul className="mt-4 space-y-1 text-center text-xs uppercase tracking-[0.2em] opacity-75">
-        {s.items.map((it) => (
-          <li key={it}>{it}</li>
-        ))}
-      </ul>
       <div className="mt-6 flex justify-center">
         <Link to="/contact" className={`rounded-md px-6 py-2 eyebrow transition-colors ${t.button}`}>
           Enquire

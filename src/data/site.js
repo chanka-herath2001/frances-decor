@@ -21,16 +21,14 @@ export const services = [
   {
     word: 'Vows',
     title: 'Ceremony Styling',
-    text: 'Floral arches, draped canopies, aisles and altars that frame the moment you say “I do”.',
-    items: ['Arches & moon gates', 'Aisle florals & candles', 'Church & garden styling'],
+    text: 'Arches, aisles and altars styled to frame your vows.',
     image: img('peach-drape-poruwa'),
     tone: 'mahogany',
   },
   {
     word: 'Bespoke',
     title: 'Full Wedding Design',
-    text: 'One look carried from the welcome sign to the last dance — ceremony, reception and every detail between.',
-    items: ['Concept & moodboard', 'Ceremony + reception', 'Bridal & party florals'],
+    text: 'One cohesive look, from the welcome sign to the last dance.',
     image: img('white-arch-head-table'),
     tone: 'olive',
     featured: true,
@@ -38,18 +36,17 @@ export const services = [
   {
     word: 'Tables',
     title: 'Reception & Florals',
-    text: 'Head tables, centrepieces, bouquets and the candlelit glow that carries the night.',
-    items: ['Head tables & centrepieces', 'Bouquets & buttonholes', 'Welcome signs & details'],
+    text: 'Tablescapes, centrepieces and bouquets that carry the night.',
     image: img('terracotta-centrepiece'),
     tone: 'mahogany',
   },
 ]
 
 export const process = [
-  { step: 'Consult', time: 'Step one', text: 'We meet, listen and learn the story you want your day to tell.' },
-  { step: 'Design', time: 'Step two', text: 'Moodboards, palettes and floral recipes shaped around your venue.' },
-  { step: 'Create', time: 'Step three', text: 'Our team sources, builds and arranges every bloom and drape.' },
-  { step: 'Celebrate', time: 'The day', text: 'We style, set and step back — so you can simply be present.' },
+  { step: 'Consult', text: 'We listen to your story.' },
+  { step: 'Design', text: 'A look shaped around your venue.' },
+  { step: 'Create', text: 'Every bloom arranged by hand.' },
+  { step: 'Celebrate', text: 'You simply enjoy the day.' },
 ]
 
 export const featured = [
@@ -68,7 +65,7 @@ export const quotes = [
 ]
 
 export const palette = [
-  { name: 'Egg Shell', hex: '#ede7db' },
+  { name: 'Beige', hex: '#e8dcc7' },
   { name: 'Linen', hex: '#ddccb7' },
   { name: 'Olive', hex: '#81763e' },
   { name: 'Moss', hex: '#6a6a53' },
@@ -76,9 +73,30 @@ export const palette = [
   { name: 'Dark Brown', hex: '#402511' },
 ]
 
-// "Tropical Vows" setups. TODO: swap in the real tropical-vows photos once supplied
-// (add them to public/images/photos and data/gallery.js, then list their ids here).
-export const tropical = ['beach-monstera-aisle', 'beach-arch-kiss', 'beach-floral-mandap', 'monstera-arch-couple', 'beach-floral-aisle', 'seaside-canopy-ceremony', 'barefoot-vows']
+// Featured setups, grouped into outdoor (seaside, garden) and indoor collections
+export const setups = [
+  {
+    id: 'seaside',
+    label: 'Seaside Ceremonies',
+    kind: 'Outdoor',
+    text: 'Sea breeze, open skies and arches dressed in white blooms and greenery — vows with the ocean as your backdrop.',
+    photos: ['beach-monstera-aisle', 'beach-arch-kiss', 'beach-floral-mandap', 'monstera-arch-couple', 'beach-floral-aisle', 'seaside-canopy-ceremony', 'barefoot-vows'],
+  },
+  {
+    id: 'garden',
+    label: 'Garden Soirées',
+    kind: 'Outdoor',
+    text: 'Lawns, forest clearings and mountain views, softened with floral arches, rattan and candlelight.',
+    photos: ['mountain-ceremony-benches', 'forest-white-arch', 'garden-arch-aisle', 'peach-drape-poruwa', 'courtyard-ceremony', 'garden-staircase', 'floating-drapes-palms'],
+  },
+  {
+    id: 'interiors',
+    label: 'Grand Interiors',
+    kind: 'Indoor',
+    text: 'Ballrooms, chapels and glasshouses transformed with cascading florals, drapery and a glow of candles.',
+    photos: ['white-arch-head-table', 'cathedral-aisle-blooms', 'white-orchid-church-arch', 'ivory-swag-head-table', 'blue-white-head-table', 'draped-ceiling-head-table', 'glasshouse-reception-lights'],
+  },
+]
 
 // Content reels: compressed 540p clips in public/reels/ (posters are the frame at ~2s).
 export const reels = [
@@ -88,7 +106,7 @@ export const reels = [
   { title: 'Villa by CC', poster: '/reels/11-01-2026-villa-by-cc.jpg', video: '/reels/11-01-2026-villa-by-cc.mp4', href: null },
   { title: 'La Belle Époque', poster: '/reels/27-12-2025-la-belle-epoque.jpg', video: '/reels/27-12-2025-la-belle-epoque.mp4', href: null },
   { title: 'Taj Samudra', poster: '/reels/14-12-2025-taj-samudra.jpg', video: '/reels/14-12-2025-taj-samudra.mp4', href: null },
-  { title: 'Tropical welcome', poster: '/reels/video-2025-11-11-10-27-39-pm.jpg', video: '/reels/video-2025-11-11-10-27-39-pm.mp4', href: null },
+  { title: 'Palm welcome', poster: '/reels/video-2025-11-11-10-27-39-pm.jpg', video: '/reels/video-2025-11-11-10-27-39-pm.mp4', href: null },
   { title: 'Welcome backdrop', poster: '/reels/video-2025-08-07-7-02-17-am.jpg', video: '/reels/video-2025-08-07-7-02-17-am.mp4', href: null },
   { title: 'Island love', poster: '/reels/video-2025-07-22-9-31-22-am.jpg', video: '/reels/video-2025-07-22-9-31-22-am.mp4', href: null },
   { title: 'Mehendi florals', poster: '/reels/video-2025-06-30-10-25-29-am.jpg', video: '/reels/video-2025-06-30-10-25-29-am.mp4', href: null },
@@ -107,3 +125,6 @@ export const faqs = [
   { q: 'Do you travel to other venues?', a: 'We work across many venues — tell us where you are celebrating and we will talk through logistics.' },
   { q: 'Is there a minimum budget?', a: 'Every celebration is different. Share a rough budget in your inquiry and we will suggest what works best within it.' },
 ]
+
+// Meet the Team — fill in name, role and photo (e.g. '/images/team/name.webp') as portraits arrive.
+export const team = Array.from({ length: 6 }, () => ({ name: '', role: '', photo: null }))

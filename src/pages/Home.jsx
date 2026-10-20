@@ -6,25 +6,21 @@ import Statement from '../components/home/Statement'
 import FeaturedWork from '../components/home/FeaturedWork'
 import Process from '../components/home/Process'
 import Quotes from '../components/home/Quotes'
-import TropicalVows from '../components/home/TropicalVows'
+import FeaturedSetups from '../components/home/FeaturedSetups'
 import Reels from '../components/home/Reels'
-import Marquee from '../components/ui/Marquee'
 import CTASection from '../components/ui/CTASection'
-
-const ribbon = ['Ceremony arches', 'Floral design', 'Reception styling', 'Candlelight', 'Tablescapes', 'Aisle décor']
 
 export default function Home({ ready = true }) {
   return (
     <Page>
       <Hero ready={ready} />
-      <Marquee items={ribbon} />
+      <Reels />
       <Welcome />
       <Services />
-      <TropicalVows />
+      <FeaturedSetups />
       <FeaturedWork />
       <Statement />
       <Process />
-      <Reels />
       <Quotes />
       <CTASection />
     </Page>

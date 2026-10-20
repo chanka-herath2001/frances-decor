@@ -4,8 +4,8 @@ import Reveal from './Reveal'
 import { NouveauBorder } from './Nouveau'
 import { img } from '../../data/gallery'
 
-// "Kindly Respond" style closing call-to-action with a wax-seal envelope.
-export default function CTASection({ title = 'Kindly Inquire', text = 'Tell us about your date, your venue and the feeling you want guests to walk into. We will reply within a few days.' }) {
+// Closing call-to-action with a wax-seal envelope.
+export default function CTASection({ text = 'Tell us about your date, your venue and the feeling you want guests to walk into. We will reply within a few days.' }) {
   return (
     <section className="relative overflow-hidden bg-mist py-24 md:py-32">
       <NouveauBorder side="left" />
@@ -28,12 +28,9 @@ export default function CTASection({ title = 'Kindly Inquire', text = 'Tell us a
           </div>
         </Reveal>
         <Reveal from="right" className="text-center md:text-left">
-          <p className="eyebrow mb-4 text-taupe">Begin your story</p>
-          <h2 className="font-serif text-5xl font-light text-navy sm:text-6xl">{title}</h2>
-          <p className="mx-auto mt-5 max-w-md leading-relaxed text-ink/75 md:mx-0">{text}</p>
+          <p className="mx-auto max-w-md font-serif text-2xl leading-relaxed text-navy md:mx-0">{text}</p>
           <div className="mt-8 flex flex-wrap justify-center gap-4 md:justify-start">
             <Button to="/contact">Start an inquiry</Button>
-            <Button to="/gallery" variant="outline">See our work</Button>
           </div>
         </Reveal>
       </div>

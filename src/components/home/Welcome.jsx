@@ -1,5 +1,4 @@
 import Reveal from '../ui/Reveal'
-import SectionTitle from '../ui/SectionTitle'
 import FramedImage from '../ui/FramedImage'
 import Button from '../ui/Button'
 import { NouveauSprig } from '../ui/Nouveau'
@@ -19,7 +18,9 @@ export default function Welcome() {
 
         <div className="relative pt-10 md:pt-0">
           <NouveauSprig className="absolute -top-20 right-0 w-14 sm:w-20" />
-          <SectionTitle align="left" eyebrow="Welcome" title="We’re so glad you’re here." />
+          <Reveal from="fade">
+            <p className="eyebrow text-taupe">About us</p>
+          </Reveal>
           <Reveal delay={0.2}>
             <p className="mt-6 max-w-md leading-relaxed text-ink/75">
               Frances Decor creates wedding and event styling that feels personal, romantic and quietly unforgettable. From a

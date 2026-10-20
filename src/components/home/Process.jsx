@@ -18,7 +18,7 @@ export default function Process() {
       <NouveauBorder side="right" opacity={0.45} />
       <NouveauSprig className="absolute right-[8%] top-20 w-12 sm:w-16" />
       <div className="mx-auto max-w-4xl px-5 sm:px-8">
-        <SectionTitle eyebrow="How it works" title="From Hello to Happily" script="our gentle process" />
+        <SectionTitle eyebrow="How it works" title="From Hello to Happily" />
 
         <div ref={ref} className="relative mt-16">
           <div className="absolute left-4 top-0 h-full w-px bg-navy/15 md:left-1/2" />
@@ -40,8 +40,7 @@ export default function Process() {
                     from={right ? 'right' : 'left'}
                     className={`pl-12 md:pl-0 ${right ? 'md:col-start-2' : 'md:text-right'}`}
                   >
-                    <p className="eyebrow text-taupe">{p.time}</p>
-                    <h3 className="mt-2 font-serif text-4xl font-light text-navy">{p.step}</h3>
+                    <h3 className="font-serif text-4xl font-light text-navy">{p.step}</h3>
                     <p className={`mt-3 max-w-sm leading-relaxed text-ink/70 ${right ? '' : 'md:ml-auto'}`}>{p.text}</p>
                   </Reveal>
                 </li>
