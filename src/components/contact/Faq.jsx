@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 import SectionTitle from '../ui/SectionTitle'
 import Reveal from '../ui/Reveal'
-import { NouveauBorder } from '../ui/Nouveau'
+import { NouveauAccents } from '../ui/Nouveau'
 import { faqs } from '../../data/site'
 
 export default function Faq() {
@@ -10,8 +10,7 @@ export default function Faq() {
 
   return (
     <section className="relative overflow-hidden bg-mist/60 py-24 md:py-32">
-      <NouveauBorder side="left" />
-      <NouveauBorder side="right" />
+      <NouveauAccents flip />
       <div className="mx-auto max-w-3xl px-5 sm:px-8">
         <SectionTitle eyebrow="Good to know" title="Questions & Answers" />
         <ul className="mt-12 border-t border-navy/20">

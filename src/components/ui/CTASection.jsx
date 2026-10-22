@@ -1,15 +1,14 @@
 import { motion } from 'motion/react'
 import Button from './Button'
 import Reveal from './Reveal'
-import { NouveauBorder } from './Nouveau'
+import { NouveauAccents } from './Nouveau'
 import { img } from '../../data/gallery'
 
 // Closing call-to-action with a wax-seal envelope.
 export default function CTASection({ text = 'Tell us about your date, your venue and the feeling you want guests to walk into. We will reply within a few days.' }) {
   return (
     <section className="relative overflow-hidden bg-mist py-24 md:py-32">
-      <NouveauBorder side="left" />
-      <NouveauBorder side="right" />
+      <NouveauAccents />
       <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 sm:px-8 md:grid-cols-2">
         <Reveal from="left" className="relative mx-auto w-full max-w-sm">
           <div className="relative aspect-[4/3] -rotate-3 overflow-hidden shadow-2xl shadow-navy/20">

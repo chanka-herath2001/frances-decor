@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import { Link } from 'react-router-dom'
 import SectionTitle from '../ui/SectionTitle'
-import { NouveauBorder } from '../ui/Nouveau'
+import { NouveauAccents } from '../ui/Nouveau'
 import { services } from '../../data/site'
 
 const tones = {
@@ -13,8 +13,7 @@ const tones = {
 export default function Services() {
   return (
     <section className="relative overflow-hidden bg-paper py-24 md:py-32">
-      <NouveauBorder side="left" opacity={0.4} />
-      <NouveauBorder side="right" opacity={0.4} />
+      <NouveauAccents />
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionTitle eyebrow="Ways to work together" title="Our Services" />
         <div className="mt-16 grid items-center gap-6 md:grid-cols-3 md:gap-8">
