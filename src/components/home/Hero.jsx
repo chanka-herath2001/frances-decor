@@ -33,7 +33,10 @@ export default function Hero({ ready }) {
             </motion.span>
           </h1>
           <motion.p variants={rise(0.9)} className="mx-auto mt-8 max-w-md leading-relaxed text-ink/70 lg:mx-0">
-            Floral arches, candlelit receptions and every soft detail in between — designed around the two of you.
+            Creating timeless, elegant, and minimalistic floral wedding decor.
+          </motion.p>
+          <motion.p variants={rise(0.95)} className="eyebrow mx-auto mt-3 max-w-md text-rust lg:mx-0">
+            Architectural destination wedding styling
           </motion.p>
           <motion.div variants={rise(1)} className="mt-9 flex flex-wrap justify-center gap-4 lg:justify-start">
             <Button to="/gallery" variant="outline">View gallery</Button>
